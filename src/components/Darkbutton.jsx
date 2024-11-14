@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import './Darkbutton.css';
 
 function Darkbutton() {
@@ -8,6 +8,15 @@ function Darkbutton() {
   const toggleDarkMode = () => {
     // When dark mode is active, change background to black and text to white.
     // When light mode is active, change background to white and text to black.
+    setIsDarkMode((prevmode)=>!prevmode)
+    if(isDarkMode)
+    {
+      document.body.style.background="rgb(240, 240, 240)";
+      document.body.style.color="rgb(0, 0, 0)";
+    }
+    else{
+    document.body.style.background="rgb(24, 24, 24)";
+  document.body.style.color="rgb(240, 240, 240)";}
   };
 
   return (
